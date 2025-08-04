@@ -162,6 +162,18 @@ import openpyxl
 from pptx import Presentation
 from docx import Document
 from werkzeug.utils import secure_filename
+import requests
+
+def extract_text_ocr_space(image_path):
+    with open(image_path, 'rb') as img:
+        response = requests.post(
+            'https://api.ocr.space/parse/image',
+            files={'filename': img},
+            data={'apikey': os.environ.get('OCR_API_KEY'), 'language': 'eng'}
+        )
+    result = response.json()
+    return result['ParsedResults'][0]['ParsedText'] if result['IsErroredOnProcessing'] == False else ""
+
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
@@ -228,7 +240,9 @@ def handle_uploaded_file(filepath, filename):
                 if f.lower().endswith(('png', 'jpg', 'jpeg')):
                     image_path = os.path.join(app.config['UPLOAD_FOLDER'], f)
                     if os.path.exists(image_path):  # Check existence
-                        text = extract_text_from_image(image_path)
+                        # text = extract_text_from_image(image_path)
+                        text = extract_text_ocr_space(image_path)
+
                         content.append((f"Session: {f}", text))
     elif extension in {'png', 'jpg', 'jpeg'}:
         text = extract_text_from_image(filepath)
@@ -289,6 +303,8 @@ def download():
 #     print("🔥 Flask server is starting on http://127.0.0.1:5000")
 #     app.run(debug=True, use_reloader=False)
 
+# Do not run Flask manually if using production WSGI server like Gunicorn
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    from waitress import serve  # or use Gunicorn if you're on Linux
+    serve(app, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+

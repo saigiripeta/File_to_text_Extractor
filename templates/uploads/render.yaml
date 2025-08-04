@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: flask-imagetotext
+    name: ocr-app
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.12
+    startCommand: python app.py  # Or `gunicorn app:app` if using gunicorn

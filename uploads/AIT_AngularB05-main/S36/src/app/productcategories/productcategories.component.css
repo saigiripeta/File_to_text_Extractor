@@ -1,9 +1,0 @@
-.categories {
-  width: 800px;
-  margin: 30px auto;
-  display: flex;
-  justify-content: space-evenly;
-}
-.categories input {
-  margin-right: 3px;
-}

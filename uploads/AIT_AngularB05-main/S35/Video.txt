@@ -1,3 +1,0 @@
- Pipes concept in Angular
- ========================
- https://youtu.be/oF70w7V1hUU?si=NalQjcieKMPLDmAp
