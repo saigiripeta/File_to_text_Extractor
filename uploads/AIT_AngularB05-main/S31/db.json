@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "101",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@example.com",
+      "gender": "Male",
+      "city": "Delhi"
+    },
+    {
+      "id": "102",
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "gender": "Female",
+      "city": "Mumbai"
+    },
+    {
+      "id": "103",
+      "name": "Amit Patel",
+      "email": "amit.patel@example.com",
+      "gender": "Male",
+      "city": "Ahmedabad"
+    },
+    {
+      "id": "104",
+      "name": "Sneha Reddy",
+      "email": "sneha.reddy@example.com",
+      "gender": "Female",
+      "city": "Hyderabad"
+    },
+    {
+      "id": "105",
+      "name": "Vikram Das",
+      "email": "vikram.das@example.com",
+      "gender": "Male",
+      "city": "Kolkata"
+    },
+    {
+      "id": "ee61",
+      "name": "s1",
+      "email": "s1@gmail.com",
+      "city": "chicago",
+      "gender": "male"
+    },
+    {
+      "id": "6e25",
+      "name": "s2",
+      "email": "s2@gmail.com",
+      "city": "houston",
+      "gender": "female"
+    },
+    {
+      "id": "a281",
+      "name": "s3",
+      "email": "s3@gmail.com",
+      "city": "newyork",
+      "gender": "female"
+    }
+  ]
+}

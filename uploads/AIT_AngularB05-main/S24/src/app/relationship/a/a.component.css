@@ -1,0 +1,7 @@
+.acontainer {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 80px;
+  box-shadow: 0 0 10px green;
+}

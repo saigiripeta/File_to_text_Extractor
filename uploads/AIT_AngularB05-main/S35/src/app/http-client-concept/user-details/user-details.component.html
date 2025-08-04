@@ -1,0 +1,53 @@
+<div class="user-details">
+  <h1>User Details</h1>
+  <br />
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eum sint
+    quidem, vitae harum perferendis ullam consequuntur neque eligendi velit
+    ipsam obcaecati aut, modi ipsum. Aperiam, ipsa assumenda. Mollitia illo
+    officia natus veniam voluptas nisi deserunt eum repudiandae, possimus, atque
+    esse aliquam harum quibusdam suscipit, dolores optio dignissimos est illum
+    blanditiis similique porro impedit nam sunt. Similique dolores repellat
+    dolor accusamus minus? At placeat consequuntur repellat earum natus culpa
+    corporis deleniti, id ab. Sit, voluptatum repellendus. Ad, eum voluptate? A
+    labore minus quaerat sequi! Ut reprehenderit facere ipsum placeat maxime
+    maiores nulla suscipit id sapiente itaque! Corrupti cum pariatur quibusdam.
+  </p>
+  <br /><br />
+
+  <table width="100%" rules="rows">
+    <tr>
+      <th>NAME</th>
+      <th>GENDER</th>
+      <th>EMAIL</th>
+      <th>CITY</th>
+      <th>UPDATE</th>
+      <th>DELETE</th>
+    </tr>
+
+    @for(user of usersservice.usersData;track user){
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.city }}</td>
+      <td>
+        <button
+          style="border: 3px solid green; padding: 7px 20px"
+          (click)="update(user, $index)"
+        >
+          Update
+        </button>
+      </td>
+      <td>
+        <button
+          style="border: 3px solid red; padding: 7px 20px"
+          (click)="callRemoveUser(user.id)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+</div>

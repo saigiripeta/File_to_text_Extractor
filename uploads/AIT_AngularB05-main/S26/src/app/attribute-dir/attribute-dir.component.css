@@ -1,0 +1,18 @@
+.attContainer {
+  width: 800px;
+  margin: 80px auto;
+}
+.green {
+  padding: 20px;
+  background-color: green;
+  color: white;
+  width: 800px;
+  margin: 30px auto;
+}
+.blue {
+  padding: 20px;
+  background-color: blue;
+  color: white;
+  width: 800px;
+  margin: 30px auto;
+}

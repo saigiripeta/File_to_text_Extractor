@@ -1,0 +1,7 @@
+<div class="acontainer">
+  <h2>Parent Component</h2>
+  <br />
+  <input [(ngModel)]="inputData" type="text" placeholder="enter some data" />
+  <button (click)="getData()">Submit</button>
+  <app-b [parentData]="data"></app-b>
+</div>

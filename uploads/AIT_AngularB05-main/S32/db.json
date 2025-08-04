@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "e8da",
+      "name": "s1",
+      "email": "s1@gmail.com",
+      "city": "newyork",
+      "gender": "male"
+    },
+    {
+      "id": "23b1",
+      "name": "s2",
+      "email": "s2@gmail.com",
+      "city": "losangeles",
+      "gender": "male"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<div class="form-container">
+  <h2 style="color: green">Create User</h2>
+  <form>
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      required
+      [(ngModel)]="username"
+    />
+    <br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required [(ngModel)]="email" />
+    <br /><br />
+    <label>Gender:</label>
+    <div class="gender-options">
+      <label
+        ><input type="radio" name="gender" value="male" [(ngModel)]="gender" />
+        Male</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="gender"
+          value="female"
+          [(ngModel)]="gender"
+        />
+        Female</label
+      >
+      <label
+        ><input type="radio" name="gender" value="other" [(ngModel)]="gender" />
+        Other</label
+      >
+    </div>
+    <br /><br />
+    <label for="city">City:</label>
+    <select id="city" name="city" required [(ngModel)]="city">
+      <option value="">--Select City--</option>
+      <option value="newyork">New York</option>
+      <option value="losangeles">Los Angeles</option>
+      <option value="chicago">Chicago</option>
+      <option value="houston">Houston</option>
+    </select>
+    <br /><br />
+    <button type="button" (click)="callCreateUser()">Create User</button>
+  </form>
+</div>

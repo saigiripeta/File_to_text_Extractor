@@ -1,0 +1,53 @@
+<div class="categories">
+  <div>
+    <input
+      [(ngModel)]="category"
+      value="all"
+      (change)="selectCategory()"
+      checked
+      type="radio"
+      name="category"
+    />
+    <label for="">All</label>
+  </div>
+  <div>
+    <input
+      value="electronics"
+      [(ngModel)]="category"
+      (change)="selectCategory()"
+      type="radio"
+      name="category"
+    />
+    <label for="">Electronics</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      value="jewelery"
+      (change)="selectCategory()"
+      [(ngModel)]="category"
+      name="category"
+    />
+    <label for="">Jewelery</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      value="men's clothing"
+      (change)="selectCategory()"
+      [(ngModel)]="category"
+      name="category"
+    />
+    <label for="">Men'sClothing</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      [(ngModel)]="category"
+      value="women's clothing"
+      (change)="selectCategory()"
+      name="category"
+    />
+    <label for="">Women'sClothing</label>
+  </div>
+</div>

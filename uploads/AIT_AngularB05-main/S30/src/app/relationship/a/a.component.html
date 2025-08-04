@@ -1,0 +1,8 @@
+<div class="acontainer">
+  <h1>Parent Component</h1>
+  <br />
+  <p>B Component Data : {{ dataFromChild }}</p>
+  <br />
+
+  <app-b (myEvent)="getChildData($event)"></app-b>
+</div>

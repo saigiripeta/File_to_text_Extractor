@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "id": "101",
+            "name": "Rahul Sharma",
+            "email": "rahul.sharma@example.com",
+            "gender": "Male",
+            "city": "Delhi"
+        },
+        {
+            "id": "102",
+            "name": "Priya Verma",
+            "email": "priya.verma@example.com",
+            "gender": "Female",
+            "city": "Mumbai"
+        },
+        {
+            "id": "103",
+            "name": "Amit Patel",
+            "email": "amit.patel@example.com",
+            "gender": "Male",
+            "city": "Ahmedabad"
+        },
+        {
+            "id": "104",
+            "name": "Sneha Reddy",
+            "email": "sneha.reddy@example.com",
+            "gender": "Female",
+            "city": "Hyderabad"
+        },
+        {
+            "id": "105",
+            "name": "Vikram Das",
+            "email": "vikram.das@example.com",
+            "gender": "Male",
+            "city": "Kolkata"
+        }
+    ]
+}

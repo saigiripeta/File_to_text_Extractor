@@ -1,0 +1,12 @@
+.user-details {
+  padding: 50px;
+  box-shadow: 0 0 10px green;
+  margin: 10px;
+}
+th,
+h1 {
+  color: green;
+}
+td {
+  padding: 10px;
+}

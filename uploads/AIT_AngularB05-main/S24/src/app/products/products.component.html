@@ -1,0 +1,84 @@
+<div
+  class="productsContainer"
+  [ngStyle]="{ color: theme.color, 'background-color': theme.bgColor }"
+>
+  <div style="text-align: center; padding: 30px">
+    <select (change)="changeTheme($event)">
+      <option value="false">Light Theme</option>
+      <option value="true">Dark Theme</option>
+    </select>
+  </div>
+  <div class="productsAdContainer"></div>
+
+  <div class="categories">
+    <div>
+      <input
+        [(ngModel)]="category"
+        value="all"
+        checked
+        type="radio"
+        name="category"
+      />
+      <label for="">All</label>
+    </div>
+    <div>
+      <input
+        value="electronics"
+        [(ngModel)]="category"
+        type="radio"
+        name="category"
+      />
+      <label for="">Electronics</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        value="jewelery"
+        [(ngModel)]="category"
+        name="category"
+      />
+      <label for="">Jewelery</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        value="men's clothing"
+        [(ngModel)]="category"
+        name="category"
+      />
+      <label for="">Men'sClothing</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        [(ngModel)]="category"
+        value="women's clothing"
+        name="category"
+      />
+      <label for="">Women'sClothing</label>
+    </div>
+  </div>
+
+  <div class="products">
+    @for(product of productsData;track product.id){ @if( category==="all" ||
+    product.category===category){
+    <div
+      class="card"
+      [ngClass]="{
+        'all-C-Styles': category === 'all',
+        'electronics-C-Styles': category === 'electronics',
+        'jewelery-C-Styles': category === 'jewelery',
+        'mens-C-Styles': category === 'men\'s clothing',
+        'womens-C-Styles': category === 'women\'s clothing'
+      }"
+    >
+      <img [src]="product.image" alt="" width="100%" height="270" />
+      <h4>{{ product.title }}</h4>
+      <br />
+      <h4 style="color: green">{{ product.category }}</h4>
+      <br />
+      <p>$ {{ product.price }}</p>
+    </div>
+    } }
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="nav">
+  <div class="brandName flex-container">
+    <h1 style="color: white">Dude-Ecomm</h1>
+  </div>
+  <div class="links flex-container">
+    @if(auth.isUserLoggedIn){
+    <a routerLink="/home">Home</a>
+    <a routerLink="/profile">Profile</a>
+    <a routerLink="/products">Products</a>
+    <a routerLink="/contactus">ContactUs</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button
+      (click)="logoutUser()"
+      style="padding: 7px 20px; color: red; font-weight: bold"
+    >
+      Logout
+    </button>
+    }@else {
+    <a routerLink="/">Sign In</a>
+    <a routerLink="/signup">Sign Up</a>
+    }
+  </div>
+</div>

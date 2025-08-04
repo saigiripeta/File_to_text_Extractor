@@ -1,0 +1,28 @@
+<div class="nav">
+  <div class="brandName flex-container">
+    <ng-content></ng-content>
+    <!-- <h1 style="color: white">Dude-Ecomm</h1> -->
+    <!-- <ng-content select=".mypara"></ng-content> -->
+  </div>
+  <div class="links flex-container">
+    @if(auth.isUserLoggedIn){
+    <a routerLink="/home">Home</a>
+    <a routerLink="/profile">Profile</a>
+    <a routerLink="/products">Products</a>
+    <a routerLink="/contactus">ContactUs</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button
+      (click)="logoutUser()"
+      style="padding: 7px 20px; color: red; font-weight: bold"
+    >
+      Logout
+    </button>
+    }@else {
+    <ng-content select="#link"></ng-content>
+    <!-- <a routerLink="/">Sign In</a> -->
+    <a routerLink="/signup">Sign Up</a>
+    <button (click)="changeTitle()">Change Title</button>
+    <!-- <ng-content select="#titleh2"></ng-content> -->
+    }
+  </div>
+</div>

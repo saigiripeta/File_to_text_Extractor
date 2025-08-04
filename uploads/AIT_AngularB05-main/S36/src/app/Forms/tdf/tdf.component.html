@@ -1,0 +1,54 @@
+<div class="login-container">
+  <form class="login-form" #myForm="ngForm" (ngSubmit)="createUser(myForm)">
+    <h2>Template Driven Form</h2>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter your email"
+        required
+        ngModel
+        email
+        #email="ngModel"
+      />
+      @if(email.touched&&email.errors?.["required"]){
+      <span style="color: red">Required Error</span>
+      } @if(email.touched&&email.errors?.["email"]){
+      <span style="color: red">add valid email id</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        ngModel
+        placeholder="Enter your password"
+        #password="ngModel"
+        minlength="7"
+        required
+      />
+      @if(password.touched&&password.errors?.["required"]){
+      <span style="color: red">Password Required Error</span>
+      } @if(password.touched&&password.errors?.["minlength"]){
+      <span style="color: red">enter minimum 7 charac's</span>
+      }
+    </div>
+    <!-- @if(myForm.controls["password"]?.touched &&
+      myForm.controls["password"]?.errors["required"]){
+      <span style="color: red">*password is required</span>
+      } @if(myForm.controls["password"]?.touched &&
+      myForm.controls["password"]?.errors["minlength"]){
+      <span style="color: red">* minimum length should be 7 character's</span>
+      } -->
+
+    <button type="submit">Submit</button><br /><br />
+    <button type="button" (click)="resetForm(myForm)">Reset</button>
+    <button type="button" (click)="patch(myForm)">Default Value</button>
+  </form>
+</div>

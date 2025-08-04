@@ -1,0 +1,14 @@
+<app-nav> </app-nav>
+
+<div style="margin-top: 50px; text-align: center">
+  <h1>Two way data binding</h1>
+  <br />
+  <input
+    type="text"
+    [(ngModel)]="textData"
+    placeholder="enter some text"
+  /><br />
+  <p>{{ textData }}</p>
+  <br /><br />
+  <button (click)="update()">Update</button>
+</div>

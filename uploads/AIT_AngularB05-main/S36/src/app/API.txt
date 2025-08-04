@@ -1,0 +1,4 @@
+Single Product API
+=====================
+`https://fakestoreapi.com/products/${product-id}`
+Methods: get

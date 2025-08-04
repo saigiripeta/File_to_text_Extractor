@@ -1,0 +1,7 @@
+.bcontainer {
+  width: 300px;
+  padding: 50px;
+  text-align: center;
+  margin: 30px auto;
+  box-shadow: 0 0 10px blue;
+}

@@ -1,0 +1,105 @@
+<div class="login-container">
+  <form
+    class="login-form"
+    [formGroup]="myReactiveform"
+    (ngSubmit)="getUserData()"
+  >
+    <h2>Reactive Form</h2>
+
+    <div class="form-group">
+      <label for="username">User Name</label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        placeholder="Enter your username"
+        formControlName="username"
+      />
+      @if(myReactiveform.get("username").touched&&myReactiveform.get("username").invalid){
+      <span style="color: red">*username is required</span>
+      }
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter your email"
+        formControlName="email"
+      />
+      @if(myReactiveform.get("email").touched&&myReactiveform.get("email").errors?.["required"]){
+      <span style="color: red">*email is required</span>
+      }
+      @if(myReactiveform.get("email").touched&&myReactiveform.get("email").errors?.["email"]){
+      <span style="color: red">*email format is incorrect</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Enter your password"
+        formControlName="password"
+      />
+      @if(myReactiveform.get("password").touched&&myReactiveform.get("password").errors?.["required"]){
+      <span style="color: red">*password is required</span>
+      } @if(validatePassword()){
+      <span style="color: red">*Minimum 7 Char's Required </span>
+      }
+    </div>
+
+    <div formArrayName="skills">
+      @for(control of getControls().controls;track control){
+      <div style="display: flex; justify-content: space-between; gap: 10px">
+        <input type="text" placeholder="skills" [formControlName]="$index" />
+        <button
+          (click)="removeControl($index)"
+          style="width: 100px"
+          type="button"
+        >
+          remove
+        </button>
+      </div>
+      <br />
+      }
+    </div>
+    <br />
+    <button
+      (click)="addControl()"
+      type="button"
+      style="background-color: blue; width: 100px"
+    >
+      Add</button
+    ><br /><br />
+
+    <button type="submit">Create User</button><br /><br />
+
+    <button
+      (click)="setValues()"
+      type="button"
+      style="background-color: blue; width: 100px"
+    >
+      Set Values</button
+    >&nbsp;&nbsp;&nbsp;
+
+    <button
+      (click)="patchValues()"
+      type="button"
+      style="background-color: blue; width: 100px"
+    >
+      Patch value</button
+    >&nbsp;&nbsp;&nbsp;
+
+    <button
+      (click)="resetForm()"
+      type="button"
+      style="background-color: blue; width: 100px"
+    >
+      Reset
+    </button>
+  </form>
+</div>

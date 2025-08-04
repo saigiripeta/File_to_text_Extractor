@@ -1,0 +1,14 @@
+.forcontainer {
+  width: 1200px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  width: 270px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px coral;
+}

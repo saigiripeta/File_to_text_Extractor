@@ -1,0 +1,14 @@
+<div class="productsContainer">
+  <div class="productsAdContainer"></div>
+
+  <app-productcategories
+    (mycustomEvent)="getCategory($event)"
+  ></app-productcategories>
+
+  <div class="products">
+    @for(product of productsData;track product.id){ @if(category==="all" ||
+    category===product.category){
+    <app-product [product]="product"></app-product>
+    } }
+  </div>
+</div>

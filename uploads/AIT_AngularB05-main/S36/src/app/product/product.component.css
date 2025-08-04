@@ -1,0 +1,26 @@
+.all-C-Styles {
+  background-color: rgb(230, 203, 193);
+}
+.electronics-C-Styles {
+  box-shadow: 0 0 10px green;
+  background-color: rgb(156, 205, 156);
+}
+.jewelery-C-Styles {
+  box-shadow: 0 0 10px rgb(221, 226, 65);
+  background-color: rgb(231, 233, 158);
+}
+.mens-C-Styles {
+  box-shadow: 0 0 10px blue;
+  background-color: rgb(137, 137, 208);
+  color: white;
+}
+.womens-C-Styles {
+  box-shadow: 0 0 10px red;
+  background-color: rgb(238, 147, 147);
+}
+.card {
+  width: 270px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px coral;
+}

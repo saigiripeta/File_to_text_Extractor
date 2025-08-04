@@ -1,0 +1,97 @@
+.productsAdContainer {
+  width: 1100px;
+  height: 250px;
+  margin: 30px auto;
+  animation-name: adAnimation;
+  animation-duration: 20s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 10px blue;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://w3layouts.com/wp-content/uploads/2017/01/electronic_store_Free30-01-2017_1525658535.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes adAnimation {
+  0% {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://w3layouts.com/wp-content/uploads/2017/01/electronic_store_Free30-01-2017_1525658535.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://images.pexels.com/photos/1660521/pexels-photo-1660521.jpeg?cs=srgb&dl=accessory-black-background-bright-1660521.jpg&fm=jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://th.bing.com/th/id/OIP.mdSJh2zkgN9oF-SqXWYUgQHaEK?rs=1&pid=ImgDetMain");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://pics.craiyon.com/2023-10-09/2a59f639da774d27b9a421e41c8d3101.webp");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://wp.scoopwhoop.com/wp-content/uploads/2017/06/5943a032fb77850983f3aca1_61ec1922-dcfb-43ca-8222-552332dd7ca0.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.categories {
+  width: 800px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.categories input {
+  margin-right: 3px;
+}
+.card {
+  width: 270px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px coral;
+}
+.products {
+  width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.all-C-Styles {
+  background-color: rgb(230, 203, 193);
+}
+.electronics-C-Styles {
+  box-shadow: 0 0 10px green;
+  background-color: rgb(156, 205, 156);
+}
+.jewelery-C-Styles {
+  box-shadow: 0 0 10px rgb(221, 226, 65);
+  background-color: rgb(231, 233, 158);
+}
+.mens-C-Styles {
+  box-shadow: 0 0 10px blue;
+  background-color: rgb(137, 137, 208);
+  color: white;
+}
+.womens-C-Styles {
+  box-shadow: 0 0 10px red;
+  background-color: rgb(238, 147, 147);
+}

@@ -1,0 +1,12 @@
+Unit Testing
+==========
+https://youtu.be/Pb6gpKxgkJ8?si=fuyWFCz4NATL2e_c
+
+
+Pipes
+=====
+https://youtu.be/oF70w7V1hUU?si=HuupbunOMgmA4gEN
+
+Angular Life Cycle (Additional)
+========================
+https://youtu.be/kor8XAVbwt4?si=FHaLpM3ypCmm7bTe

@@ -1,0 +1,9 @@
+<div style="padding: 50px">
+  <h1 style="color: blue">Y Component</h1>
+  <ul>
+    @for(tech of techService.techData; track tech){
+    <li>{{ tech }}</li>
+    }
+  </ul>
+  <button (click)="getBackendTech()">Update to Backend</button>
+</div>

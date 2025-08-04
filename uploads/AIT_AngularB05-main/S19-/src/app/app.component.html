@@ -1,0 +1,22 @@
+<app-nav> </app-nav>
+
+<div style="margin-top: 50px; text-align: center">
+  <h2>Show Password Task</h2>
+  <input [type]="typeValue" />
+  <button (click)="showPassword()">{{ btnText }}</button><br /><br />
+
+  <input
+    type="text"
+    placeholder="enter some text"
+    (input)="getData($event)"
+  /><br /><br />
+
+  <p>{{ inputData }}</p>
+  <br /><br />
+  <h2>I am {{ username + " Verma" }} from {{ city }}</h2>
+
+  <img [src]="image" [width]="width" [height]="height" />
+
+  <br /><br />
+  <button (click)="changeUserData()">Change User</button>
+</div>

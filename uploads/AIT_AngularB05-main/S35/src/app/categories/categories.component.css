@@ -1,0 +1,8 @@
+.categories {
+  width: 1230px;
+  height: 130px;
+
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}

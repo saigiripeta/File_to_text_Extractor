@@ -1,0 +1,9 @@
+<div style="display: grid; grid-template-columns: 40% 60%">
+  @if(usersservice.showNewUser){
+  <app-create-user></app-create-user>
+
+  }@else {
+  <app-update-user></app-update-user>
+  }
+  <app-user-details></app-user-details>
+</div>

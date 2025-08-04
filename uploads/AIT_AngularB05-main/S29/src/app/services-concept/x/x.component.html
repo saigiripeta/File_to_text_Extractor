@@ -1,0 +1,10 @@
+<div style="padding: 50px">
+  <h1>X Component</h1>
+  <ol>
+    @for(tech of techService.techData; track tech){
+    <li>{{ tech }}</li>
+    }
+  </ol>
+  <button (click)="getBackendTech()">Update to Backend</button>
+  <button (click)="techService.changeTechData()">Service Methods</button>
+</div>

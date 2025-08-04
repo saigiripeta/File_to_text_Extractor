@@ -1,0 +1,35 @@
+.productsAdContainer {
+  width: 1100px;
+  height: 250px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px blue;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://w3layouts.com/wp-content/uploads/2017/01/electronic_store_Free30-01-2017_1525658535.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.categories {
+  width: 800px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.categories input {
+  margin-right: 3px;
+}
+.card {
+  width: 270px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px coral;
+}
+.products {
+  width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}

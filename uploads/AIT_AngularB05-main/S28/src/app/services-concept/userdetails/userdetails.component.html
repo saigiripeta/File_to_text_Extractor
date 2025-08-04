@@ -1,0 +1,14 @@
+<div style="padding: 50px">
+  <h2>UserDetails Component</h2>
+  <br />
+  <div>
+    <ol>
+      @for(user of usersservice.users;track user;){
+
+      <li>{{ user }} <button (click)="removeUser($index)">Remove</button></li>
+      <br />
+
+      }
+    </ol>
+  </div>
+</div>

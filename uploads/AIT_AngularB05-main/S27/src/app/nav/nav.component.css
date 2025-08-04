@@ -1,0 +1,23 @@
+.nav {
+  height: 80px;
+  background: linear-gradient(45deg, black, rgb(63, 13, 13), black, red);
+  display: flex;
+  box-shadow: 0 0 10px red;
+}
+.brandName {
+  width: 40%;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links {
+  width: 60%;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  margin-left: 50px;
+}
