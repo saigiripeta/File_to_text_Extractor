@@ -166,7 +166,7 @@ from werkzeug.utils import secure_filename
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 app = Flask(__name__)
-app.secret_key = 'secret-key'
+app.secret_key = os.environ.get('SECRET_KEY', 'fallback-secret-key')
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['OUTPUT_FOLDER'] = 'output'
 
