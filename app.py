@@ -285,6 +285,10 @@ def download():
     doc.save(output_path)
     return send_file(output_path, as_attachment=True)
 
+# if __name__ == '__main__':
+#     print("🔥 Flask server is starting on http://127.0.0.1:5000")
+#     app.run(debug=True, use_reloader=False)
+
 if __name__ == '__main__':
-    print("🔥 Flask server is starting on http://127.0.0.1:5000")
-    app.run(debug=True, use_reloader=False)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
