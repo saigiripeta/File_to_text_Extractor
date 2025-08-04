@@ -177,7 +177,9 @@ def extract_text_ocr_space(image_path):
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
+
 app.secret_key = os.environ.get('SECRET_KEY', 'fallback-secret-key')
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['OUTPUT_FOLDER'] = 'output'
